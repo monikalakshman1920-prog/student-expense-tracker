@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>💸 Student Expense Tracker</h1>
+  <p>Manage your money, one expense at a time!</p>
+
+  <h2>My Budget</h2>
+  <h3>Total Spent: ₹<span id="total">0</span></h3>
+
+  <h2>Monthly Budget</h2>
+  <input type="number" id="monthlyBudget" placeholder="Enter monthly budget in ₹" min="0" step="0.01">
+  <button id="saveBudgetBtn">Set Budget</button>
+  <h3>Budget Remaining: ₹<span id="budgetRemaining">0.00</span></h3>
+  <p id="budgetMessage">Set your monthly budget to get started!</p>
+
+  <h2>Add an Expense</h2>
+  <input type="text" id="expenseName" placeholder="What did you spend on?">
+  <input type="number" id="expenseAmount" placeholder="Amount in ₹" min="0.01" step="0.01">
+
+  <select id="expenseCategory">
+    <option value="Food">Food</option>
+    <option value="Travel">Travel</option>
+    <option value="Education">Education</option>
+    <option value="Shopping">Shopping</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <input type="date" id="expenseDate">
+  <button id="addBtn">Add Expense</button>
+
+  <h2>My Expenses</h2>
+  <div id="expenseList"></div>
+
+  <h2>Spending by Category</h2>
+  <div id="categorySummary"></div>
+
+  <h2>Spending Chart</h2>
+  <div id="spendingChart"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
